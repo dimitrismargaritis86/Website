@@ -1,0 +1,301 @@
+.con7 {
+
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+    height: 12rem;
+    background-color: rgba(1, 3, 105, 0.6);
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+.titles {
+
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    place-content: center;
+
+}
+
+.address {
+
+    color: rgb(199, 198, 198);
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    line-height: 0.8rem;
+    object-fit: cover;
+    text-align: center;
+
+}
+
+.contact {
+
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    line-height: 0.8rem;
+    object-fit: cover;
+    text-align: center;
+    align-self: start;
+
+}
+
+.contact a:link {
+
+    color: rgb(199, 198, 198);
+    text-decoration: none;
+    
+
+}
+
+.contact a:hover {
+
+    color: #0781fe;
+
+}
+
+.socials {
+
+    display: flex;
+    gap: 30px;
+    place-content: center;
+
+}
+
+.socials a {
+
+    background-color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 1.5rem;
+    
+}
+
+.socials a svg {
+
+    height: 30px;
+
+}
+
+
+.socials .facebook a::before {
+
+    content: attr(data-social);
+    position: absolute;
+    background-color: #1877F2;
+    color: white;
+    text-decoration: none;
+    padding: 0.4em 0.8em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(-30px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+
+}
+
+.socials .instagram a::before {
+
+    content: attr(data-social);
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    padding: 0.4em 0.8em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(-30px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+
+
+    background: #833ab4;
+    background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045);
+
+}
+
+.socials .facebook a:hover {
+
+    background-color: #1877F2;
+    fill: white;
+
+}
+
+.socials .instagram a:hover {
+
+    background: #833ab4;
+    background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045);    
+    fill: white;
+
+}
+
+.socials a:hover svg {
+
+    fill: white;
+
+}
+
+.socials a::after {
+
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+
+
+}
+
+.socials .facebook a::after {
+
+    border-top: 10px solid #1877F2;
+
+}
+
+.socials .instagram a::after {
+
+    border-top: 10px solid #fd1d1d;
+
+}
+
+.socials a:hover::before {
+
+    transform: translateY(-57px) rotate(0);
+    opacity: 1;
+
+}
+
+.socials a:hover::after {
+
+    transform: translateY(-39px) rotate(0);
+    opacity: 1;
+
+}
+
+
+.copyrights {
+
+
+    color: white;
+    background-color: rgb(43, 27, 23);
+    border-radius: 5px;
+    margin-top: 3rem;
+    padding: 2px;
+
+}
+
+@media (max-width:658px) {
+
+    .titles {
+
+        font-size: 1rem;
+
+    }
+
+    .address, .contact {
+
+        font-size: 2.5vw;
+
+    }
+
+    .socials {
+
+        gap: 15px;
+
+    }
+
+    .socials a {
+
+        height: 50px;
+        width: 50px;
+        padding: 0.5rem;
+
+    }
+
+    .socials a svg {
+
+        height: 25px;
+
+}
+
+}
+
+@media (max-width:480px) {
+
+    .con7 {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        height: auto;
+        align-items: start;
+        gap: 30px;
+
+    }
+
+    .titles {
+
+        font-size: 1.5rem;
+        text-align: start;
+        margin-top: 0.5rem;
+        margin-left: 0.7rem;
+
+
+    }
+
+    .address {
+
+        grid-area: 2 / 1 / 2 /1;
+        font-size: 1rem;
+        text-align: start;
+        margin-top: -2.5rem;
+        margin-left: 0.7rem;
+
+    }
+
+    .contact {
+
+        grid-area: 4 / 1 / 4 / 1;
+        font-size: 1rem;
+        text-align: start;
+        margin-top: -2.5rem;
+        margin-left: 0.7rem;
+
+    }
+
+    .socials {
+
+        grid-area: 6 / 1 / 6 / 1;
+        place-content: start;
+        padding-bottom: 2rem;
+        margin-left: 0.7rem;
+        margin-top: -0.7rem;
+
+    }
+
+    .copyrights {
+
+        margin-top: 5rem;
+
+    }
+
+}

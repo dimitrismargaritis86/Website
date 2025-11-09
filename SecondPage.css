@@ -1,0 +1,162 @@
+.con2 {
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: rgba(9, 18, 53, 0.4);
+    margin-top: 5rem;
+    height: 10rem;
+    border-radius: 4px;
+
+
+}
+
+.quote {
+
+    color: #F8F8F8;
+    margin-top: 1rem;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: max(1vw, 2.5rem);
+    font-weight: 400;
+
+
+}
+
+
+.quote {
+
+    animation: QuoteReveal both;
+    animation-timeline: view(10% 5%);
+
+}
+
+@keyframes QuoteReveal {
+
+    0% {
+
+        filter: saturate(0) contrast(4) brightness(0.1) blur(5px);
+        opacity: 0;
+
+    }
+
+    70% {
+
+        filter: none;
+        opacity: 1;
+    }
+
+}
+
+.Leonardo {
+
+    color: #C0C0C0;
+    margin-left: auto;
+    margin-top: auto;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-size: max(0.5vw, 2rem);
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+
+}
+
+.Leonardo {
+
+    animation: LeonardoReveal both;
+    animation-timeline: view(60% 25%);
+
+}
+
+
+@keyframes LeonardoReveal {
+
+    0% {
+
+        filter: saturate(0) contrast(4) brightness(0.1) blur(5px);
+        opacity: 0;
+        transform: translateX(2rem);
+
+
+    }
+
+    100% {
+
+        filter: none;
+        opacity: 1;
+        transform: translate(0);
+
+    }
+
+}
+
+@media (max-width: 726px) {
+
+
+    .quote {
+
+        font-size: calc(2.5vw + 1rem);
+
+
+    }
+
+    .Leonardo {
+
+        font-size: calc(2vw + 0.7rem);
+
+    }
+
+}
+
+@media (max-width: 358px) {
+
+
+    .quote {
+
+        font-size: calc(2vw + 1rem);
+
+
+    }
+
+    .Leonardo {
+
+        font-size: calc(1vw + 1rem);
+
+    }
+
+}
+
+@media (max-width: 296px) {
+
+    .con2 {
+
+        height: 11rem;
+
+    }
+
+        .quote {
+
+            font-size: 1.2rem;
+            margin-top: 1.2rem;
+
+   }
+
+}
+
+@media (min-width: 1750px) {
+
+
+    .quote {
+
+        font-size: 2.7vw;
+
+
+    }
+
+    .Leonardo {
+
+        font-size: 1.7vw;
+
+    }
+
+}

@@ -1,0 +1,262 @@
+.con3 {
+
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    height: 95vh;
+    gap: 2rem;
+    margin-bottom: 10rem;
+
+}
+
+.image2 {
+
+    grid-column: 1/2;
+    background-image: url(Images/Car\ 11.png);
+    width: 100%;
+    height: 100%;
+    
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    position: relative;  
+    border-radius: 3rem;
+    
+
+}
+
+.image2::after, .image2::before {
+
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-image: conic-gradient(from 65deg, transparent 0,yellow,black,black,white,black,black);
+    z-index: -1;
+    padding: 3.5px;
+    border-radius: inherit;
+}
+
+.image2::before{
+
+    filter: blur(2rem);
+
+}
+
+.description {
+
+    grid-column: 2/3;
+    color: white;
+    margin-top: clamp(1rem, 7vh, 15%);
+    margin-left: clamp(1.2rem, 3.5vw, 3.5rem);
+    justify-self: start;
+    width: clamp(18rem, 40vw, 34rem);
+    max-width: 95%;
+    height: clamp(15rem, 65%, 40rem);
+    background-color: rgba(0, 33, 71, 0.5);
+    border: 0.2rem solid cyan;
+    box-shadow: 0 0 8px cyan, 0 0 8px cyan inset;    
+    border-radius: 3.5rem;
+    padding: 4.5vh 1.5rem;
+    text-align: center;
+    font-size: clamp(0.88rem, 1.28vw, 1.25rem);
+    font-family: "Source Serif 4", serif;
+    font-weight: 500;
+    object-fit: cover;
+    box-sizing: border-box;
+    white-space: normal;           
+    overflow-wrap: anywhere;
+    word-break: break-word;        
+    hyphens: auto; 
+
+}
+
+.descriptionsmall {
+        
+    display: none;
+
+}
+
+@media (min-width: 1558px) {
+
+
+    .description {
+
+        font-size: 2vh;
+
+    }
+
+}
+
+@media (min-width: 1796px) {
+
+
+    .description {
+
+        margin-left: 10vw;
+
+    }
+
+}
+
+@media (max-width: 1080px) {
+
+    .con3 {
+
+        display: grid;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        height: 90vh;
+        place-content: center;
+
+    }
+
+    .description {
+
+        grid-area: 1 / 2 / 4 / 8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        margin-top: 2rem;
+        color: white;
+        flex-wrap: nowrap;
+        width: 80vw;
+        z-index: 200;
+        margin: 0;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        font-size: min(0.9rem, 2.1vw);
+        color: white;
+        justify-self: start;
+        height: clamp(15rem, 65%, 40rem);
+        overflow-y: auto;
+        background-color: rgba(0, 33, 71, 0.5);
+        border: 0.2rem solid cyan;
+        box-shadow: 0 0 8px cyan, 0 0 8px cyan inset;    
+        border-radius: 3.5rem;
+        padding: 1.5rem 1.5rem;
+        text-align: center;
+        font-family: "Source Serif 4", serif;
+        font-weight: 500;
+        object-fit: cover;
+        box-sizing: border-box;
+        white-space: normal;           
+        overflow-wrap: anywhere;
+        word-break: break-word;        
+        hyphens: auto;  
+        
+    }
+
+    .image2 {
+
+        grid-area: 1 / 1 / 9 / 9;
+
+    }
+    
+}
+
+@media (max-width: 500px) {
+
+    .con3 {
+
+        display: grid;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        height: 90vh;
+        place-content: center;
+
+    }
+
+    .description {
+
+        display: none;
+
+    }
+
+    .descriptionsmall {
+
+        grid-area: 1 / 2 / 4 / 8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        margin-top: 2rem;
+        color: white;
+        flex-wrap: nowrap;
+        width: 90vw;
+        z-index: 200;
+        margin: 0;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        font-size: min(0.8rem, 4vw);
+        color: white;
+        justify-self: start;
+        height: clamp(13rem, 50%, 40rem);
+        overflow-y: auto;
+        background-color: rgba(0, 33, 71, 0.5);
+        border: 0.2rem solid cyan;
+        box-shadow: 0 0 8px cyan, 0 0 8px cyan inset;    
+        border-radius: 3.5rem;
+        padding: 1.5rem 1.5rem;
+        text-align: center;
+        font-family: "Source Serif 4", serif;
+        font-weight: 500;
+        object-fit: cover;
+        box-sizing: border-box;
+        white-space: normal;           
+        overflow-wrap: anywhere;
+        word-break: break-word;        
+        hyphens: auto;  
+
+    }
+
+    .image2 {
+
+        grid-area: 1 / 1 / 9 / 9;
+
+    }
+    
+}
+
+.description,.descriptionsmall{
+
+    animation: DescriptionAppear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100vh;
+
+}
+
+
+@keyframes DescriptionAppear {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(100px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+@media (min-width:1340px) {
+
+    .description {
+
+        height: 60%;
+
+    }
+
+}
