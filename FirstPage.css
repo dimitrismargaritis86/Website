@@ -1,0 +1,345 @@
+html {
+
+    overflow-x: clip;
+
+}
+
+body {
+
+    background-color: black;
+    overflow-x: clip;
+
+}
+
+.con1 {
+
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    height: 95vh;
+    margin-top: 2.5vh;
+    place-content: center;
+    position: relative;
+
+}
+
+.brand-mark {
+
+    position: absolute;
+    top: 0.25rem;
+    left: 0.4rem;
+    z-index: 6;
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    opacity: 0;
+    pointer-events: none;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+
+}
+
+.brand-mark .bm-name {
+
+    color: #ffffff;
+    font-size: clamp(1.3rem, 2vw, 2.6rem);
+    letter-spacing: 0.02em;
+
+}
+
+.brand-mark .bm-sub {
+
+    color: rgb(233, 30, 30);
+    font-size: clamp(0.95rem, 1.4vw, 1.85rem);
+    letter-spacing: 0.04em;
+
+}
+
+.scroll-cue {
+
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    z-index: 6;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: clamp(0.5rem, 0.8vw, 1.1rem);
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    transform: translate(-50%, 0);
+    animation: scrollBob 2.6s ease-in-out infinite;
+
+}
+
+.scroll-cue.show {
+
+    opacity: 0.45;
+
+}
+
+@keyframes scrollBob {
+
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 6px); }
+
+}
+
+.image-wrap {
+  grid-area: 1 / 1 / 9 / 9;
+  position: relative;
+  border-radius: 15px;
+  z-index: -5;
+
+}
+
+.logo {
+
+    grid-area: 1 / 4 / 3 / 6;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(12, 23, 30);
+    border-radius: 20px;
+    margin-top: 2rem;
+    color: white;
+    position: relative;
+
+    box-shadow: 0 0 20px rgba(255, 32, 32, 0.6);
+
+    opacity: 0;
+
+}
+
+.text1 {
+
+    font-size: clamp(3vw, 3rem, 5vw);
+
+}
+
+.text2 {
+
+    color: rgb(233, 30, 30);
+    font-size: clamp(2vw, 2rem, 3.5vw);
+    margin-left: auto;
+    padding-right: clamp(1rem, 3vw, 3rem);
+
+}
+
+.hero-video {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    position: relative;
+    z-index: -3;
+    display: block;
+
+}
+
+@media (max-width: 900px), (max-aspect-ratio: 3 / 2) {
+
+    .hero-video {
+        object-fit: contain;
+    }
+
+}
+
+@media (min-width: 2000px) {
+
+    .hero-video {
+        object-fit: contain;
+    }
+
+}
+
+@media (max-aspect-ratio: 3 / 2) {
+
+    .con1 {
+        height:80vw;
+    }
+
+    .hero-video {
+        object-position: center bottom;
+    }
+
+}
+
+@media (min-width: 767px) and (max-aspect-ratio: 3 / 2) {
+
+    .brand-mark .bm-name { font-size: clamp(2rem, 4vw, 3rem); }
+    .brand-mark .bm-sub  { font-size: clamp(1.4rem, 2.8vw, 2.2rem); }
+    .language { font-size: clamp(1rem, 1.8vw, 1.4rem); }
+
+    .scroll-cue { font-size: clamp(0.9rem, 1.4vw, 1.3rem); }
+
+    .logo { grid-area: 2 / 4 / 4 / 6; }
+
+}
+
+@property --angle {
+
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+
+}
+
+.logo::after {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 3px;
+    background: conic-gradient(from var(--angle), #b81212, #ff6060, #b81212, #b81212, #ff6060, #b81212);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    animation: spin 3s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+        --angle: 0deg;
+    }
+
+    to{
+        --angle:360deg;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .logo{
+
+        margin-left: -2rem;
+        margin-right: -2rem;
+        grid-area: 2 / 4 / 4 / 6;
+
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .image {
+
+        background-image: url(Images/Cars\ 11\ Small.png);
+        grid-area: 1 / 1 / 9 / 9;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: black;
+        background-position: center 70%;
+
+    }
+
+    .logo{
+
+        margin-left: -2rem;
+        margin-right: -3rem;
+        margin-top: 3rem;
+        grid-area: 2 / 4 / 5 / 6;
+
+    }
+
+    .hero-video {
+
+        margin-top: 2rem;
+
+    }
+
+    .text1 {
+
+        font-size: 6vw;
+
+    }
+
+    .text2 {
+
+        font-size: 4.5vw;
+
+    }
+
+}
+
+.language{
+
+    grid-area: 1 / 8 / 9 / 8;
+    text-align: end;
+    margin-top: 0.7rem;
+    margin-right: 2rem;
+    z-index: 6;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
+
+}
+
+.language a {
+
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+.language a:hover {
+
+    color: #ffffff;
+
+}
+
+.language a.active {
+
+    color: #ffffff;
+
+}
+
+.language .lang-sep {
+
+    color: rgba(255, 255, 255, 0.28);
+    margin: 0 0.4rem;
+
+}
+
+@media (max-width:450px) {
+
+    .language {
+
+        font-size: 0.7rem;
+        margin-right: 1rem;
+
+    }
+
+}
+
+@media (max-width:500px) {
+
+    .scroll-cue {
+
+        bottom: -1rem;
+
+    }
+
+}
+
+@media (min-width:1500px) {
+
+    .language {
+
+        font-size: 1.5vw;
+
+    }
+
+}

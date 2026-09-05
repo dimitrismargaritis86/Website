@@ -1,0 +1,411 @@
+.ourservices {
+
+    padding-top: 5rem;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0 8px 12px rgba(0, 0, 128, 1);
+    margin-bottom: 6rem;
+
+    animation: ServicesAppear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100vh;
+
+}
+
+@keyframes ServicesAppear {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(100px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+@media (max-width: 382px) {
+
+    .ourservices {
+
+        padding-top: 3rem;
+        font-size: 2.5rem;
+
+    }
+
+}
+
+@media (min-width: 1700px) {
+
+    .ourservices {
+
+        padding-top: 4rem;
+        font-size: 7rem;
+
+    }
+
+}
+
+.con5 {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 85%;
+    place-items: center;
+    margin: auto;
+    row-gap: 3rem;
+    column-gap: 0.8rem;
+    margin-bottom: 10rem;
+
+}
+
+.image3 {
+
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+
+    background-image: url("Images/Car Fix 11.jpg");
+    background-image: image-set(url("Images/Car Fix 11.webp") type("image/webp"), url("Images/Car Fix 11.jpg") type("image/jpeg"));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 0.8rem;
+
+    animation: Image35Move both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+
+}
+
+.text3 {
+
+    color: #F5F5F5;
+    text-align: center;
+    width: 70%;
+    font-family: "Sansation", sans-serif;
+    font-weight: 800;
+    font-size: min(1.15rem, 2vw);
+    line-height: 1.35;
+    border: 1px solid #C0C0C0;
+    border-radius: 2rem;
+    box-shadow: 0 0 25px rgba(255,255,255,0.5), 0 0 20px rgba(192,192,192,0.5) inset;
+    padding: 1rem;
+    margin-left: 1rem;
+    background-color: rgba(10, 20, 45, 0.9);
+
+    animation: Text35Move both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+
+}
+
+.text4 {
+
+    color: #F5F5F5;
+    text-align: center;
+    width: 70%;
+    font-family: "Sansation", sans-serif;
+    font-weight: 800;
+    font-size: min(1.15rem, 2vw);
+    line-height: 1.35;
+    border: 1px solid #C0C0C0;
+    border-radius: 2rem;
+    box-shadow: 0 0 25px rgba(255,255,255,0.5), 0 0 20px rgba(192,192,192,0.5) inset;
+    padding: 1rem;
+    margin-left: 1rem;
+    background-color: rgba(10, 20, 45, 0.9);
+
+    animation: Text46Move both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+
+}
+
+.image4 {
+
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+
+    background-image: url("Images/Car Fix 33.jpg");
+    background-image: image-set(url("Images/Car Fix 33.webp") type("image/webp"), url("Images/Car Fix 33.jpg") type("image/jpeg"));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 0.8rem;
+
+    animation: Image46Move both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+
+}
+
+.image5 {
+
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+
+    background-image: url("Images/Car Fix 22.jpg");
+    background-image: image-set(url("Images/Car Fix 22.webp") type("image/webp"), url("Images/Car Fix 22.jpg") type("image/jpeg"));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 0.8rem;
+
+    animation: Image35Move both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+
+}
+
+.text5 {
+
+    color: #F5F5F5;
+    text-align: center;
+    width: 70%;
+    font-family: "Sansation", sans-serif;
+    font-weight: 800;
+    font-size: min(1.15rem, 2vw);
+    line-height: 1.35;
+    border: 1px solid #C0C0C0;
+    border-radius: 2rem;
+    box-shadow: 0 0 25px rgba(255,255,255,0.5), 0 0 20px rgba(192,192,192,0.5) inset;
+    padding: 1rem;
+    margin-left: 1rem;
+    background-color: rgba(10, 20, 45, 0.9);
+
+    animation: Text35Move both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+
+}
+
+.text6 {
+
+    color: #F5F5F5;
+    text-align: center;
+    width: 70%;
+    font-family: "Sansation", sans-serif;
+    font-weight: 800;
+    font-size: min(1.15rem, 2vw);
+    line-height: 1.35;
+    border: 1px solid #C0C0C0;
+    border-radius: 2rem;
+    box-shadow: 0 0 25px rgba(255,255,255,0.5), 0 0 20px rgba(192,192,192,0.5) inset;
+    padding: 1rem;
+    margin-left: 1rem;
+    background-color: rgba(10, 20, 45, 0.9);
+
+    animation: Text46Move both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+
+}
+
+.image6 {
+
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+
+    background-image: url("Images/Car 22.jpg");
+    background-image: image-set(url("Images/Car 22.webp") type("image/webp"), url("Images/Car 22.jpg") type("image/jpeg"));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 0.8rem;
+
+    animation: Image46Move both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+
+}
+
+@keyframes Image35Move {
+
+    from {
+
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+
+}
+
+@keyframes Text35Move {
+
+    from {
+
+        opacity: 0;
+        transform: translateX(100px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+
+}
+
+@keyframes Image46Move {
+
+    from {
+
+        opacity: 0;
+        transform: translateX(100px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+
+}
+
+@keyframes Text46Move {
+
+    from {
+
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    .text3 {
+
+        font-size: min(1rem, 2vw);
+        width: 85%;
+
+    }
+
+   .text4 {
+
+        font-size: min(1rem, 2vw);
+        width: 85%;
+
+    }
+
+    .text5 {
+
+        font-size: min(1rem, 2vw);
+        width: 85%;
+
+    }
+
+    .text6 {
+
+        font-size: min(1rem, 2vw);
+        width: 85%;
+
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .con5 {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        height: auto;
+        width: 90%;
+        row-gap: 1.6rem;
+        margin-bottom: 6rem;
+
+    }
+
+    .image3, .image4, .image5, .image6 {
+
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 11;
+        background-size: cover;
+        margin-left: 0;
+
+    }
+
+    .text3, .text4, .text5, .text6 {
+
+        width: 90%;
+        margin-left: 0;
+        font-size: 1.05rem;
+        line-height: 1.4;
+        padding: 1rem;
+
+    }
+
+    .text3, .text4, .text5 {
+
+        margin-bottom: 3.5rem;
+
+    }
+
+    .image3 { order: 1; }
+    .text3  { order: 2; }
+    .image4 { order: 3; }
+    .text4  { order: 4; }
+    .image5 { order: 5; }
+    .text5  { order: 6; }
+    .image6 { order: 7; }
+    .text6  { order: 8; }
+
+    .image4, .image6 { animation-name: Image35Move; }
+    .text4,  .text6  { animation-name: Text35Move; }
+
+}
+
+@media (max-width: 380px) {
+
+    .text3, .text4, .text5, .text6 {
+
+        font-size: 0.95rem;
+
+    }
+
+}
+
+@media (min-width: 1500px) {
+
+    .text3,.text4,.text5,.text6 {
+
+        font-size: 1.5vw;
+
+    }
+
+}

@@ -1,0 +1,209 @@
+.con4 {
+
+    background-color: rgba(4, 30, 66, 0.8);
+    min-height: 20rem;
+    width: 90%;
+    margin: auto;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+    position: relative;
+    --wheel-size: clamp(5rem, 10vw, 9rem);
+
+}
+
+.firstline {
+
+    color: white;
+    padding-left: 0.5rem;
+    padding-right: calc(var(--wheel-size) / 2);
+    padding-top: 2.5rem;
+    margin-left: 2rem;
+    font-size: 2.4vw;
+    font-weight: 800;
+    font-family: "Geologica", sans-serif;
+
+    animation: TextPopUp both;
+    animation-timeline: view();
+    animation-range: entry 55% cover 35%;
+
+}
+
+.secondline {
+
+    color: white;
+    padding: 2.5rem;
+    padding-top: 2.7rem;
+    padding-bottom: 1.4rem;
+    font-size: 2.1vw;
+    font-weight: 800;
+    font-family: "Geologica", sans-serif;
+
+    animation: TextPopUp both;
+    animation-timeline: view();
+    animation-range: entry 70% cover 35%;
+
+}
+
+.thirdline {
+
+    color: white;
+    padding: 2.5rem;
+    padding-top: 1.2rem;
+    font-size: 1.9vw;
+    font-weight: 800;
+    font-family: "Geologica", sans-serif;
+
+    animation: TextPopUp both;
+    animation-timeline: view();
+    animation-range: entry 85% cover 40%;
+}
+
+.wheel {
+
+    width: var(--wheel-size);
+    aspect-ratio: 1;
+    background-image: url("Images/Wheel.png");
+    background-image: image-set(url("Images/Wheel.webp") type("image/webp"), url("Images/Wheel.png") type("image/png"));
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 10;
+    top: calc(var(--wheel-size) / -2);
+    right: calc(var(--wheel-size) / -2 + 1rem);
+
+    animation: WheelSpin;
+    animation-timeline: view();
+
+}
+
+@keyframes TextPopUp {
+
+  0% {
+
+    transform: translateY(0px);
+
+  }
+
+  60% {
+
+    transform: translateY(-1rem);
+    text-shadow: 0 8px 12px rgba(255, 192, 0, 0.7);
+
+}
+
+  100% {
+
+    transform: translateY(0px);
+
+  }
+
+}
+
+@keyframes WheelSpin {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+  }
+
+@media (max-width: 856px) {
+
+    .firstline {
+
+      font-size: 1.3rem;
+      padding-left: 0;
+      margin-left: 1.5rem;
+
+    }
+
+    .secondline {
+
+      font-size: 1.05rem;
+      padding-left: 0;
+      margin-left: 1.5rem;
+
+    }
+
+    .thirdline {
+
+      font-size: 0.95rem;
+      padding-left: 0;
+      margin-left: 1.5rem;
+
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .con4 {
+
+      min-height: 18rem;
+      width: 92%;
+      margin-left: 1rem;
+      --wheel-size: clamp(3.5rem, 11vw, 6rem);
+
+    }
+
+    .firstline {
+
+      font-size: 1.1rem;
+
+    }
+
+    .secondline {
+
+      font-size: 0.95rem;
+
+    }
+
+    .thirdline {
+
+      font-size: 0.85rem;
+
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .firstline {
+
+      font-size: 0.95rem;
+
+    }
+
+    .secondline {
+
+      font-size: 0.82rem;
+
+    }
+
+    .thirdline {
+
+      font-size: 0.78rem;
+
+    }
+
+}
+
+@media (min-width: 1876px) {
+
+    .con4 {
+
+      min-height: 27rem;
+
+    }
+
+}
